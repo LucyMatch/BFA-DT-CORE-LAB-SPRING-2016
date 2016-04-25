@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="utf-8" />
+    <meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+	<link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+
+	<div id="app" style="margin: 0 auto; width: 960px; text-align: center;">
+      <!-- When this button is pressed we will be pinging the api route /myApi -->
+      <button id="btnPingServer">Ping Api</button>
+
+      <!-- Input field for the response message you want to send to the API /myApi/message -->
+      <input id="iptMessage" type="text" placeholder="message for the API">
+      <button id="btnSubmit">Submit</button>
+
+      <div class="messageContainer" style="margin-top: 50px; background: grey; height:100px;">
+
+      </div>
+
+	</div>
+
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-beta1/jquery.min.js"></script>
+	<script type="text/javascript" src="js/main.js"></script>
+</body>
+</html>

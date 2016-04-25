@@ -1,0 +1,69 @@
+
+CREATE TABLE item
+(
+  id INT(100) NOT NULL auto_increment,
+  title VARCHAR(200) NOT NULL,
+  description VARCHAR(250),
+  due_date DATETIME DEFAULT NULL,
+  PRIMARY KEY (id)
+)
+
+CREATE TABLE item ( id INT(100) NOT NULL auto_increment, title VARCHAR(200) NOT NULL, description VARCHAR(250), due_date DATETIME DEFAULT NULL, PRIMARY KEY (id) )
+
+CREATE TABLE tag
+(
+  id INT(11) NOT NULL auto_increment,
+  tag VARCHAR(50) NOT NULL,
+  PRIMARY KEY (id)
+)
+CREATE TABLE tag ( id INT(11) NOT NULL auto_increment, tag VARCHAR(50) NOT NULL, PRIMARY KEY(id) )
+
+CREATE TABLE tags
+(
+  item_id INT(100) NOT NULL,
+  tag_id INT(11) NOT NULL,
+  FOREIGN KEY (item_id) REFERENCES item(id),
+  FOREIGN KEY (tag_id) REFERENCES tag(id)
+)
+
+CREATE TABLE tags ( item_id INT(100) NOT NULL, tag_id INT(11) NOT NULL, FOREIGN KEY (item_id) REFERENCES item(id), FOREIGN KEY (tag_id) REFERENCES tag(id) )
+
+CREATE TABLE imgs
+(
+  item_id INT(100) NOT NULL,
+  img_url VARCHAR(200) NOT NULL,
+  PRIMARY KEY (item_id),
+  FOREIGN KEY (item_id) REFERENCES item(id)
+)
+
+CREATE TABLE imgs ( item_id INT(100) NOT NULL, img_url VARCHAR(200) NOT NULL,PRIMARY KEY (item_id), FOREIGN KEY (item_id) REFERENCES item(id) )
+
+
+//INSERTS
+INSERT INTO item(title, description,due_date) VALUES(?,?,?)
+
+INSERT INTO tag(tag) VALUES(?)
+
+//ADD TAG TO ITEM? IS THIS HOW?
+INSERT INTO tags(item_id, tag_id) VALUES((SELECT id FROM item WHERE id=?), (SELECT id FROM tag WHERE id=?))
+
+//GET
+SELECT * FROM item
+
+// to get w/ tags
+SELECT item.title,item.description, tag.tag FROM item, tag, tags WHERE tags.item_id = item.id and tags.tag_id = tag.id
+
+//update_item
+UPDATE item SET ? = '?' WHERE id = ?
+
+//delete_item
+DELETE FROM item WHERE id = ?
+
+//get_by_tag
+SELECT .....
+
+
+
+///DELETE
+PW HASH
+You might need CHAR(56), CHAR(60), CHAR(76), BINARY(56) or BINARY(60)

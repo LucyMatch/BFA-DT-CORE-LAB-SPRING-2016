@@ -1,0 +1,80 @@
+/* ~~Style Here~~ */
+
+body{
+  background:#B5E4F3;
+  font-family: helvetica;
+}
+
+.page {
+  width : 50vw;
+  height: 80vh;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+li {
+  list-style-type: none;
+  border: 10px;
+  border-color: black;
+  border-style: solid;
+  text-align: center;
+  margin-top:-10px;
+  padding-bottom:3%;
+  background:#EAA3C3;
+}
+
+.create-input{
+  padding-top:3%;
+  padding-bottom:3%;
+}
+
+h2{
+  Padding-bottom: 0px;
+  text-transform: uppercase;
+  font-size: 1.5em;
+  border-bottom: solid black 10px;
+  width: 50%;
+  margin-left:auto;
+  margin-right:auto;
+}
+
+p{
+  letter-spacing: 30px;
+  text-transform: uppercase;
+  font-size:0.8em;
+}
+
+h1{
+  padding-top:5%;
+  text-transform: uppercase;
+  padding-bottom: 5%;
+
+}
+
+button {
+  padding-left: 4%;
+  padding-right: 4%;
+  border: none;
+  background-color: white;
+  padding-top: 1%;
+  padding-bottom: 1%;
+}
+
+input {
+  padding-top:1%;
+  padding-bottom:1%;
+  width: 30%;
+
+}
+
+
+footer {
+  position: fixed;
+  bottom: 20px;
+  left: 0px;
+  z-index: 9;
+  width: 100%;
+  text-align: center;
+  //background-color: #B5E4F3;
+}
